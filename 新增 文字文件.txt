@@ -1,0 +1,235 @@
+namespace counter
+{
+    public partial class Form1 : Form
+    {
+        decimal i = 0;
+        Int64 j,k;
+
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_1_Click(object sender, EventArgs e)
+        {
+            if(text.Text=="0")
+            { text.Text = "1"; }
+            else
+            {
+                string one = text.Text + "1";
+                text.Text = one;
+            }
+           
+        }
+
+        private void btn_2_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "2"; }
+            else
+            {
+                string one = text.Text + "2";
+                text.Text = one;
+            }
+        }
+
+        private void btn_3_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "3"; }
+            else
+            {
+                string one = text.Text + "3";
+                text.Text = one;
+            }
+        }
+
+        private void btn_4_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "4"; }
+            else
+            {
+                string one = text.Text + "4";
+                text.Text = one;
+            }
+        }
+
+        private void btn_5_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "5"; }
+            else
+            {
+                string one = text.Text + "5";
+                text.Text = one;
+            }
+        }
+
+        private void btn_6_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "6"; }
+            else
+            {
+                string one = text.Text + "6";
+                text.Text = one;
+            }
+        }
+
+        private void btn_7_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "7"; }
+            else
+            {
+                string one = text.Text + "7";
+                text.Text = one;
+            }
+        }
+
+        private void btn_8_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "8"; }
+            else
+            {
+                string one = text.Text + "8";
+                text.Text = one;
+            }
+        }
+
+        private void btn_9_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "9"; }
+            else
+            {
+                string one = text.Text + "9";
+                text.Text = one;
+            }
+        }
+
+        private void btn_0_Click(object sender, EventArgs e)
+        {
+            if (text.Text == "0")
+            { text.Text = "0"; }
+            else
+            {
+                string one = text.Text + "0";
+                text.Text = one;
+            }
+        }
+
+        private void btn_divide_Click(object sender, EventArgs e)
+        {
+            /*i = i/ System.Convert.ToDecimal(text.Text);
+            text.Text = "0";
+            label.Text = i.ToString();*/
+            action();
+            j = 1;
+        }
+
+        private void btn_times_Click(object sender, EventArgs e)
+        {
+            /*i =  System.Convert.ToDecimal(text.Text) * i;
+            text.Text = "0";
+            label.Text = i.ToString();*/
+            action();
+            j = 2;
+        }
+
+        private void btn_diviend_Click(object sender, EventArgs e)
+        {
+            /*i = i%  System.Convert.ToDecimal(text.Text) ;
+            text.Text = "0";
+            label.Text = i.ToString();*/
+            action();
+            j = 3;
+        }
+
+        private void btn_C_Click(object sender, EventArgs e)
+        {
+            text.Text = "0";
+            i = 0;
+            label.Text = i.ToString();
+        }
+
+        private void btn_plus_Click(object sender, EventArgs e)
+        {
+            /*i =  System.Convert.ToDecimal(text.Text) + i;
+            text.Text = "0";
+            label.Text = i.ToString();*/
+            action();
+            j = 4;
+        }
+
+        private void btn_minus_Click(object sender, EventArgs e)
+        {
+            /* i = i- System.Convert.ToDecimal(text.Text) ;
+             text.Text = "0";
+             label.Text = i.ToString();*/
+            action();
+            j = 5;
+        }
+
+        private void btn_dot_Click(object sender, EventArgs e)
+        {
+            //string test = "10.2552";
+            //decimal testde = System.Convert.ToDecimal(test);
+            //int i = 10;
+            string one = text.Text + ".";
+            text.Text = one;
+
+
+        }
+
+        private void btn_equel_Click(object sender, EventArgs e)
+        {
+            if(j==1)
+            {label.Text= (System.Convert.ToDecimal(label.Text) / System.Convert.ToDecimal(text.Text)).ToString(); }
+            else if(j==2)
+            { label.Text = (System.Convert.ToDecimal(label.Text) *  System.Convert.ToDecimal(text.Text)).ToString(); }
+            else if(j ==3)
+            { label.Text = ( System.Convert.ToDecimal(label.Text) %  System.Convert.ToDecimal(text.Text)).ToString(); }
+            else if(j==4)
+            { label.Text = ( System.Convert.ToDecimal(label.Text) +  System.Convert.ToDecimal(text.Text)).ToString(); }
+            else if(j==5)
+            { label.Text = ( System.Convert.ToDecimal(label.Text) -  System.Convert.ToDecimal(text.Text)).ToString(); }
+            text.Text = "0";
+
+        }
+        private void action()
+        {
+            if( System.Convert.ToDecimal(label.Text)==0)
+            { label.Text = text.Text;
+                text.Text = "0";
+            }
+         
+            else 
+            {
+                if (j == 1)
+                { label.Text = ( System.Convert.ToDecimal(label.Text) /  System.Convert.ToDecimal(text.Text)).ToString(); }
+                else if (j == 2)
+                { label.Text = ( System.Convert.ToDecimal(label.Text) *  System.Convert.ToDecimal(text.Text)).ToString(); }
+                else if (j == 3)
+                { label.Text = ( System.Convert.ToDecimal(label.Text) %  System.Convert.ToDecimal(text.Text)).ToString(); }
+                else if (j == 4)
+                { label.Text = ( System.Convert.ToDecimal(label.Text) +  System.Convert.ToDecimal(text.Text)).ToString(); }
+                else if (j == 5)
+                { label.Text = ( System.Convert.ToDecimal(label.Text) -  System.Convert.ToDecimal(text.Text)).ToString();
+                  
+                }
+                text.Text = "0";
+            }
+
+        }
+
+    }
+}
